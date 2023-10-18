@@ -1,0 +1,26 @@
+<div class="navbar stickynavbar navbar-expand-sm navbar-light">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <%= link_to root_path do %>
+        <%= image_tag "https://res.cloudinary.com/dhxscmmta/image/upload/v1697622865/WhatToCook/what-to-cook-logo.png", alt: "Logo", class: "navbar-logo" %>
+      <% end %>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item"><%= link_to "My Profile", root_path, class: "nav-link text-end" %></li>
+          <li class="nav-item"><hr class="dropdown-divider"></li>
+          <li class="nav-item"><%= link_to "Log out", destroy_user_session_url, method: :delete, class: "nav-link text-end"%></li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Log in", new_user_session_path, class:"nav-link text-end"%></li>
+          <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class:"nav-link text-end"%></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
