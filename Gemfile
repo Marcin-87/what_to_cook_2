@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootstrap', '>= 5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -64,5 +65,4 @@ gem 'cloudinary'
 gem 'devise'
 gem 'pundit'
 gem 'webpacker-react'
-gem 'bootstrap'
 gem 'simple_form', '~> 5.3'
